@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+
+# git
+.git
+.gitignore
+
+# build outputs
+dist
+coverage
+
+# logs
+*.log
+
+# env
+.env
+
+# local SDK (VERY LARGE)
+google-cloud-sdk
+
+# OS files
+.DS_Store
