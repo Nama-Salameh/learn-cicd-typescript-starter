@@ -1,4 +1,4 @@
-![Tests](https://github.com/<Nama-Salameh>/<learn-cicd-typescript-starter>/actions/workflows/<ci.yml>/badge.svg)
+![Tests](https://github.com/Nama-Salameh/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)
 
 # learn-cicd-typescript-starter (Notely)
 
