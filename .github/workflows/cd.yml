@@ -24,13 +24,14 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Set up gcloud
-        uses: google-github-actions/setup-gcloud@v1
+      # Setup gcloud CLI
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
         with:
-          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           project_id: notely-488918
+          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
 
-      - name: Build and Push Docker Image
+      # Submit Docker build to Artifact Registry
+      - name: Build and push Docker image
         run: |
-          gcloud builds submit \
-            --tag us-central1-docker.pkg.dev/notely-488918/notely-ar-repo/notely:latest .
+          gcloud builds submit --tag us-central1-docker.pkg.dev/notely-488918/notely-ar-repo/notely:latest .
